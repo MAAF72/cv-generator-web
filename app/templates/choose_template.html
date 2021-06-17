@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Choose Template</title>
+    </head>
+    <!-- Bootstrap CDN-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+    <!-- import custome css-->
+    <link href="{{ url_for('static', filename='css/modif.css') }}" rel="stylesheet">
+    <!--additional css-->
+    {% for e in css %}<link href="{{ url_for('static', filename='css/' + e) }}" rel="stylesheet">{% endfor %}
+    <body>
+        <!--Content-->
+        <div class="container white-space-download-page">
+            <div class="row">
+                <div class="col-12">
+                    <div class="d-flex">
+
+                        {% for t in templates %}
+                        <div class="radio col-4 card p-1 m-1" data-value="{{t}}"><img class="cv-preview flex-fill" src="{{ templates[t].preview }}"></div>
+                        {% endfor %}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mx-auto navbar fixed-bottom" id="navbar-div">
+            <div class="row action p-5">
+                <div class="col-6 m-auto">
+                    <div>
+                        <h5>Choose your template</h5>
+                        <p class="text-secondary">choose the template you like so that your cv looks professional.</p>
+                        <button type="button" class="btn btn-light text-uppercase font-weight-bolder" id="edit-cv">Back to input my data</button>
+                        <button type="button" class="btn btn-primary text-uppercase font-weight-bolder" id="download-cv">Download My CV</button>
+                    </div>
+                </div>
+                <div class="col-6 m-auto">
+                    <div class="mx-auto">
+                        <img src="{{ url_for('static', filename='assets/1-2-x.png') }}" alt="multi-step" class="img-fluid multi-step-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <!--swalalert-->
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+        <!--additional script-->
+        {% for e in js %}<script src="{{ url_for('static', filename='js/' + e) }}"></script>{% endfor %}
+    </body>
+</html>
