@@ -1,6 +1,5 @@
 hypercorn
 flask
-firebase_admin
 python-dotenv
 CacheControl==0.12.6
 cachetools==4.2.1
