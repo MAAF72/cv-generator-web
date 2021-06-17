@@ -12,7 +12,7 @@ def generate_unique_code():
 class Firebase(metaclass=Singleton):
     def __init__(self):
         initialize_app(
-            credentials.Certificate('app/cv-generator-e29dd-firebase-adminsdk-zvelg-ae5fe10a7a.json'), 
+            credentials.Certificate('cv-generator-e29dd-firebase-adminsdk-zvelg-ae5fe10a7a.json'), 
             {
                 'databaseURL': 'https://cv-generator-e29dd-default-rtdb.firebaseio.com/',
                 'storageBucket': 'cv-generator-e29dd.appspot.com'

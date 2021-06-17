@@ -1,4 +1,4 @@
-hypercorn
+gunicorn
 flask
 python-dotenv
 firebase-admin
