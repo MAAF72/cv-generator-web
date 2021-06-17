@@ -14,7 +14,7 @@ window.onscroll = function() {
 $(function() {
     const path_name = window.location.pathname.split('/')
     const unique_code = path_name[2]
-    const generator_endpoint = `http://cv-generator-core.herokuapp.com/generate`
+    const generator_endpoint = `https://cv-generator-core.herokuapp.com/generate`
     const ms = Date.now();
     const file_url = `https://storage.googleapis.com/cv-generator-e29dd.appspot.com/cv/${unique_code}.pdf?rand=${ms}`
 
