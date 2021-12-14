@@ -127,9 +127,14 @@ def save(unique_code):
             url_file_photo = None
 
             if unique_code:
-                url_file_photo = fb.read_cv(unique_code)['customer']['foto']
-                if not fb.update_cv(unique_code, data):
-                  return 'ERROR'
+                try:
+                    url_file_photo = fb.read_cv(unique_code)['customer']['foto']
+                except Exception as e:
+                    url_file_photo = None
+                    pass
+                else:
+                    if not fb.update_cv(unique_code, data):
+                        return 'ERROR'
             else:
                 unique_code = fb.create_cv(data)
 
