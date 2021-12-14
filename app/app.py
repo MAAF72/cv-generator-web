@@ -115,6 +115,7 @@ def set_template(unique_code):
 def save(unique_code):
     if request.method == 'POST':
         try:
+            print(f'saving {unique_code}')
             data = request.json
 
             base64_photo = None
@@ -142,6 +143,6 @@ def save(unique_code):
 
             return unique_code
         except Exception as e:
-            print(e.with_traceback())
+            print(e)
             return 'ERROR'
     return 'OK'
