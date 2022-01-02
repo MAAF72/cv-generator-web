@@ -69,7 +69,7 @@ function fill_identity({ nama = '', email = '', no_hp = '', portfolio = '', job 
 /* Start : Add More Button */
 function add_sosial_media({ nama = '', link = '' }) {
     const html = `
-    <div id="content-socialmedia">
+    <div class="content-socialmedia">
         <div class="div-content-row">
             <input type="text" class="form-control" id="nama" name="nama" value="${nama}" aria-describedby="label" placeholder="Social Media">
             <div style="width: 16px;"></div>
@@ -89,7 +89,7 @@ function add_sosial_media({ nama = '', link = '' }) {
 
 function add_edukasi({ jenjang = '', instansi = '', tahun_mulai = '', tahun_selesai = '', deskripsi = '' }) {
     const html = `
-    <div id="content-edukasi">
+    <div class="content-edukasi">
         <div class="div-content-row">
             <input type="text" class="form-control" id="jenjang" name="jenjang" value="${jenjang}" aria-describedby="jenjang" placeholder="Jenjang">
             <div style="width: 16px;"></div>
@@ -118,7 +118,7 @@ function add_edukasi({ jenjang = '', instansi = '', tahun_mulai = '', tahun_sele
 
 function add_penghargaan({ nama = '', instansi = '', tahun = '', deskripsi = '' }) {
     const html = `
-    <div id="content-penghargaan">
+    <div class="content-penghargaan">
         <div class="div-content-row">
             <input type="text" class="form-control" id="nama" name="nama" value="${nama}" aria-describedby="name" placeholder="Nama Penghargaan">
             <div style="width: 16px;"></div>
@@ -145,7 +145,7 @@ function add_penghargaan({ nama = '', instansi = '', tahun = '', deskripsi = '' 
 
 function add_kemampuan({ nama = '' }) {
     const html = `
-    <div id="content-kemampuan">
+    <div class="content-kemampuan">
         <div class="div-content-row">
             <input type="text" class="form-control" id="nama" name="nama" value="${nama}" aria-describedby="kemampuan" placeholder="Kemampuan">
         </div>
@@ -164,7 +164,7 @@ function add_kemampuan({ nama = '' }) {
 
 function add_pengalaman({ nama = '', instansi = '', tahun_mulai = '', tahun_selesai = '', deskripsi = '' }) {
     var html = `
-    <div id="content-pengalaman">               
+    <div class="content-pengalaman">               
         <div class="div-content-row">
             <input type="text" class="form-control" id="nama" name="nama" value="${nama}" aria-describedby="nama" placeholder="Job Role">
             <div style="width: 16px;"></div>
@@ -195,7 +195,7 @@ function add_pengalaman({ nama = '', instansi = '', tahun_mulai = '', tahun_sele
 
 function add_rujukan({ nama = '', instansi = '', no_hp = '', email = '' }) {
     const html = `
-    <div id="content-rujukan">
+    <div class="content-rujukan">
         <div class="div-content-row">
             <input type="text" class="form-control" id="nama" name="nama" value="${nama}" aria-describedby="name" placeholder="Name">
             <div style="width: 16px;"></div>
@@ -222,7 +222,7 @@ function add_rujukan({ nama = '', instansi = '', no_hp = '', email = '' }) {
 
 function add_bahasa({ nama = '', level = '' }) {
     const html = `
-    <div id="content-bahasa">
+    <div class="content-bahasa">
         <div class="div-content-row">
             <input type="text" class="form-control" name="nama" value="${nama}" aria-describedby="nama" placeholder="Bahasa">
             <div style="width: 16px;"></div>
