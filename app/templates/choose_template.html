@@ -18,7 +18,7 @@
                     <div class="d-flex">
 
                         {% for t in templates %}
-                        <div class="radio col-4 card p-1 m-1" data-value="{{t}}"><img class="cv-preview flex-fill" src="{{ templates[t].preview }}"></div>
+                        <div class="radio col-4 card p-1 m-1" data-value="{{t}}" id="template-{{t}}"><img class="cv-preview flex-fill" src="{{ templates[t].preview }}"></div>
                         {% endfor %}
 
                     </div>

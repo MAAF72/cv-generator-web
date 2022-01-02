@@ -39,7 +39,7 @@ $(function() {
                     allowOutsideClick: false,
                     showCancelButton: false,
                     showConfirmButton: false,
-                    onBeforeOpen: () => {
+                    willOpen: () => {
                         Swal.showLoading()
                     },
                 })
