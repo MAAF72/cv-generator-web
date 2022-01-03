@@ -14,6 +14,15 @@ window.onscroll = function() {
 }
 
 function readPhoto(file) {
+    // validation
+    if (!file['type'].includes('image')) {
+        throw "invalid image file"
+    }
+
+    if (parseInt(file['size']) > 1024 * 1024) {
+        throw "invalid image size"
+    }
+
     var reader = new FileReader()
     reader.onload = function (e) {
         $('#customer_photo')
@@ -224,7 +233,7 @@ function add_bahasa({ nama = '', level = '' }) {
     const html = `
     <div class="content-bahasa">
         <div class="div-content-row">
-            <input type="text" class="form-control" name="nama" value="${nama}" aria-describedby="nama" placeholder="Bahasa">
+            <input type="text" class="form-control" id="name" name="nama" value="${nama}" aria-describedby="nama" placeholder="Bahasa">
             <div style="width: 16px;"></div>
             <select class="custom-select" id="level" name="level">
                 <option hidden value="">Choose Level</option>
@@ -357,7 +366,13 @@ $(function() {
     })
 
     $('#photo').change(function() {
-        readPhoto(this.files[0])
+        try {
+            readPhoto(this.files[0])
+        } catch (err) {
+            alert(err)
+            $('#photo').val('')
+        }
+        
     })
 })
 /* End : Button Handler Using JQuery */
