@@ -20,7 +20,7 @@ $(function() {
 
     $('#edit-cv').click(() => window.location.replace(`/edit/${unique_code}`))
 
-    $('#download-cv').click(() => {
+    $('#get-cv').click(() => {
         if (template_id == null) {
             alert('Please select template first')
             return
