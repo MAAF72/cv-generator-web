@@ -370,7 +370,6 @@ $(function() {
             readPhoto(this.files[0])
         } catch (err) {
             alert(err)
-            $('#photo').val('')
         }
         
     })
