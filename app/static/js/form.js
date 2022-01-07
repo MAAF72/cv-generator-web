@@ -233,7 +233,7 @@ function add_bahasa({ nama = '', level = '' }) {
     const html = `
     <div class="content-bahasa">
         <div class="div-content-row">
-            <input type="text" class="form-control" id="name" name="nama" value="${nama}" aria-describedby="nama" placeholder="Bahasa">
+            <input type="text" class="form-control" id="nama" name="nama" value="${nama}" aria-describedby="nama" placeholder="Bahasa">
             <div style="width: 16px;"></div>
             <select class="custom-select" id="level" name="level">
                 <option hidden value="">Choose Level</option>
