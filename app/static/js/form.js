@@ -80,9 +80,9 @@ function add_sosial_media({ nama = '', link = '' }) {
     const html = `
     <div class="content-socialmedia">
         <div class="div-content-row">
-            <input type="text" class="form-control" id="nama" name="nama" value="${nama}" aria-describedby="label" placeholder="Social Media">
+            <input type="text" class="form-control" id="nama" name="nama" value="${nama}" aria-describedby="label" placeholder="Social Media" required>
             <div style="width: 16px;"></div>
-            <input type="text" class="form-control" id="link" name="link" value="${link}" aria-describedby="link" placeholder="Link">
+            <input type="text" class="form-control" id="link" name="link" value="${link}" aria-describedby="link" placeholder="Link" required>
         </div>
         <div class="row justify-content-end">
             <button type="button" id="delete-socialmedia" class="btn btn-outline-danger justify-content-end"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
@@ -100,14 +100,14 @@ function add_edukasi({ jenjang = '', instansi = '', tahun_mulai = '', tahun_sele
     const html = `
     <div class="content-edukasi">
         <div class="div-content-row">
-            <input type="text" class="form-control" id="jenjang" name="jenjang" value="${jenjang}" aria-describedby="jenjang" placeholder="Jenjang">
+            <input type="text" class="form-control" id="jenjang" name="jenjang" value="${jenjang}" aria-describedby="jenjang" placeholder="Jenjang" required>
             <div style="width: 16px;"></div>
-            <input type="text" class="form-control" id="instansi" name="instansi" value="${instansi}" aria-describedby="instansi" placeholder="Instansi">
+            <input type="text" class="form-control" id="instansi" name="instansi" value="${instansi}" aria-describedby="instansi" placeholder="Instansi" required>
         </div>
         <div class="div-content-row">
-            <input type="date" class="form-control" id="tahun_mulai" name="tahun_mulai" value="${tahun_mulai}" aria-describedby="tahun_mulai" placeholder="Date Start">
+            <input type="date" class="form-control" id="tahun_mulai" name="tahun_mulai" value="${tahun_mulai}" aria-describedby="tahun_mulai" placeholder="Date Start" required>
             <div style="width: 16px;"></div>
-            <input type="date" class="form-control" id="tahun_selesai" name="tahun_selesai" value="${tahun_selesai}" aria-describedby="tahun_selesai" placeholder="Date End">
+            <input type="date" class="form-control" id="tahun_selesai" name="tahun_selesai" value="${tahun_selesai}" aria-describedby="tahun_selesai" placeholder="Date End" required>
         </div>
         <div class="div-content-row">
             <textarea class="form-control" id="deskripsi" name="deskripsi" rows="3" placeholder="Describe about your Educate">${deskripsi}</textarea>
@@ -129,12 +129,12 @@ function add_penghargaan({ nama = '', instansi = '', tahun = '', deskripsi = '' 
     const html = `
     <div class="content-penghargaan">
         <div class="div-content-row">
-            <input type="text" class="form-control" id="nama" name="nama" value="${nama}" aria-describedby="name" placeholder="Nama Penghargaan">
+            <input type="text" class="form-control" id="nama" name="nama" value="${nama}" aria-describedby="name" placeholder="Nama Penghargaan" required>
             <div style="width: 16px;"></div>
-            <input type="text" class="form-control" id="instansi" name="instansi" value="${instansi}" aria-describedby="instansi" placeholder="Instansi">
+            <input type="text" class="form-control" id="instansi" name="instansi" value="${instansi}" aria-describedby="instansi" placeholder="Instansi" required>
         </div>
         <div class="div-content-row">
-            <input type="date" class="form-control" id="tahun" name="tahun" value="${tahun}" aria-describedby="tahun" placeholder="tahun">
+            <input type="date" class="form-control" id="tahun" name="tahun" value="${tahun}" aria-describedby="tahun" placeholder="tahun" required>
         </div>
         <div class="div-content-row">
             <textarea class="form-control" id="deskripsi" name="deskripsi" rows="3" placeholder="Describe about your Penghargaan">${deskripsi}</textarea>
@@ -156,7 +156,7 @@ function add_kemampuan({ nama = '' }) {
     const html = `
     <div class="content-kemampuan">
         <div class="div-content-row">
-            <input type="text" class="form-control" id="nama" name="nama" value="${nama}" aria-describedby="kemampuan" placeholder="Kemampuan">
+            <input type="text" class="form-control" id="nama" name="nama" value="${nama}" aria-describedby="kemampuan" placeholder="Kemampuan" required>
         </div>
         <div class="row justify-content-end">
             <button type="button" id="delete-kemampuan" class="btn btn-outline-danger justify-content-end"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
@@ -175,15 +175,15 @@ function add_pengalaman({ nama = '', instansi = '', tahun_mulai = '', tahun_sele
     var html = `
     <div class="content-pengalaman">               
         <div class="div-content-row">
-            <input type="text" class="form-control" id="nama" name="nama" value="${nama}" aria-describedby="nama" placeholder="Job Role">
+            <input type="text" class="form-control" id="nama" name="nama" value="${nama}" aria-describedby="nama" placeholder="Job Role" required>
             <div style="width: 16px;"></div>
-            <input type="text" class="form-control" id="instansi" name="instansi" value="${instansi}" aria-describedby="instansi" placeholder="Instansi">
+            <input type="text" class="form-control" id="instansi" name="instansi" value="${instansi}" aria-describedby="instansi" placeholder="Instansi" required>
         </div>
         
         <div class="div-content-row">
-            <input type="date" class="form-control" id="tahun_mulai" name="tahun_mulai" value="${tahun_mulai}" aria-describedby="tahun_mulai" placeholder="Date Start">
+            <input type="date" class="form-control" id="tahun_mulai" name="tahun_mulai" value="${tahun_mulai}" aria-describedby="tahun_mulai" placeholder="Date Start" required>
             <div style="width: 16px;"></div>
-            <input type="date" class="form-control" id="tahun_selesai" name="tahun_selesai" value="${tahun_selesai}" aria-describedby="tahun_selesai" placeholder="Date End">
+            <input type="date" class="form-control" id="tahun_selesai" name="tahun_selesai" value="${tahun_selesai}" aria-describedby="tahun_selesai" placeholder="Date End" required>
         </div>
         
         <div class="div-content-row">
@@ -206,15 +206,15 @@ function add_rujukan({ nama = '', instansi = '', no_hp = '', email = '' }) {
     const html = `
     <div class="content-rujukan">
         <div class="div-content-row">
-            <input type="text" class="form-control" id="nama" name="nama" value="${nama}" aria-describedby="name" placeholder="Name">
+            <input type="text" class="form-control" id="nama" name="nama" value="${nama}" aria-describedby="name" placeholder="Name" required>
             <div style="width: 16px;"></div>
-            <input type="text" class="form-control" id="instansi" name="instansi" value="${instansi}" aria-describedby="instansi" placeholder="Instansi">
+            <input type="text" class="form-control" id="instansi" name="instansi" value="${instansi}" aria-describedby="instansi" placeholder="Instansi" required>
         </div>
         
         <div class="div-content-row">
-            <input type="text" class="form-control" id="no_hp" name="no_hp" value="${no_hp}" aria-describedby="Phone" placeholder="Phone">
+            <input type="text" class="form-control" id="no_hp" name="no_hp" value="${no_hp}" aria-describedby="Phone" placeholder="Phone" required>
             <div style="width: 16px;"></div>
-            <input type="text" class="form-control" id="email" name="email" value="${email}" aria-describedby="email" placeholder="email">
+            <input type="text" class="form-control" id="email" name="email" value="${email}" aria-describedby="email" placeholder="email" required>
         </div>
         <div class="row justify-content-end">
             <button type="button" id="delete-rujukan" class="btn btn-outline-danger justify-content-end"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
@@ -233,9 +233,9 @@ function add_bahasa({ nama = '', level = '' }) {
     const html = `
     <div class="content-bahasa">
         <div class="div-content-row">
-            <input type="text" class="form-control" id="nama" name="nama" value="${nama}" aria-describedby="nama" placeholder="Bahasa">
+            <input type="text" class="form-control" id="nama" name="nama" value="${nama}" aria-describedby="nama" placeholder="Bahasa" required>
             <div style="width: 16px;"></div>
-            <select class="custom-select" id="level" name="level">
+            <select class="custom-select" id="level" name="level" required>
                 <option hidden value="">Choose Level</option>
                 <option value="Elementary" ${level == 'Elementary' ? 'selected' : ''}>Elementary</option>
                 <option value="Professional" ${level == 'Professional' ? 'selected' : ''}>Professional</option>
@@ -355,13 +355,29 @@ $(function() {
     })
 
     $('#btn-choose-template').click((e) => {
-        let foto = $('#photo')[0].files[0]
+        e.preventDefault()
         
-        if (!unique_code && !foto) {
-            alert('Please upload your photo')
+        const forms = document.querySelectorAll('.needs-validation')
+        let is_ok = true
+
+        Array.prototype.slice.call(forms).forEach((form) => {
+            if (!form.checkValidity()) {
+                is_ok = false
+            }
+            form.classList.add('was-validated')
+        })
+
+        if (is_ok) {
+            let foto = $('#photo')[0].files[0]
+        
+            if (!unique_code && !foto) {
+                alert('Please upload your photo')
+            } else {
+                if (foto) readFileAsDataURL(foto).then((foto_base64) => upload_data(foto_base64))
+                else upload_data()
+            }
         } else {
-            if (foto) readFileAsDataURL(foto).then((foto_base64) => upload_data(foto_base64))
-            else upload_data()
+            alert("Please fill all required data(s)")
         }
     })
 
